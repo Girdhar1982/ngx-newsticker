@@ -43,7 +43,7 @@ export class NgxNewstickerAlbeComponent implements OnInit, AfterViewInit {
 
   @ViewChild('nDart', { static: true })
   private nDart!: ElementRef;
-  
+
   @ViewChildren('ntNavi')
   ntNaviRef!: QueryList<ElementRef>;
 
@@ -108,11 +108,11 @@ export class NgxNewstickerAlbeComponent implements OnInit, AfterViewInit {
   }
 
   public navigate(action: string) {
-   const shift: number | undefined = 
-      action == 'NEXT' ? this.ACTIONS.NEXT : 
-      action == 'PREV' ? this.ACTIONS.PREV : 
-      undefined;
-      
+    const shift: number | undefined =
+      action == 'NEXT' ? this.ACTIONS.NEXT :
+        action == 'PREV' ? this.ACTIONS.PREV :
+          undefined;
+
     if (typeof shift === 'undefined') {
       return;
     }
